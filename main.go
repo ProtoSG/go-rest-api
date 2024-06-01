@@ -49,10 +49,10 @@ func getAlbums(db *sql.DB) []Categoria {
 
 func main() {
 	err := godotenv.Load()
-	if err != nil {
-		fmt.Println("Error loading .env file")
-		os.Exit(1)
-	}
+	// if err != nil {
+	// 	fmt.Println("Error loading .env file")
+	// 	os.Exit(1)
+	// }
 
 	DATABASE_URL := os.Getenv("DATABASE_URL")
 
