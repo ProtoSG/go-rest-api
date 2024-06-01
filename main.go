@@ -82,5 +82,9 @@ func main() {
 		categorias := getAlbums(db)
 		c.JSON(200, categorias)
 	})
-	router.Run("localhost:8080")
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8080"
+	}
+	router.Run(":" + port)
 }
